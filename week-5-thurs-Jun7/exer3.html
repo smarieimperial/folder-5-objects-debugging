@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+ <!-- div container that will print to browser -->
+ <div id="three">
+        <p>Here are some random values</p>
+    </div>
+
+    <!-- <div>Counter: <span id="counter"></span></div> -->
+
+<script type="text/javascript">
+	/* 
+		write code here so to mimick the gif, 
+		
+		user hits a key, it triggers a function
+
+		in the function you capture the key the user pressed
+
+		you also pick a random option in the options array for the computer
+		
+		alert what the computer picked and what the user picked.
+
+		if they're both equal to one another then alert the number of times the user tied with the computer
+	*/
+var ties = 0;
+var options = ['r', 'p', 's'];
+
+// when a User presses a key, upon release the function will create an event
+
+//document.onkeypress  = function(event) 
+function play(event){
+var one = event.key; 
+    // write code so that on key press, you alert a random value from the options array
+    // (you can't explicitly use 0, 1, 2 in your code)
+var itsRandom = options[Math.floor(Math.random() * options.length)]; 
+// if ((one === "s") || (one === "p") || (one === "r")) 
+// {
+    if ((one === "s") && (itsRandom === "s")) {
+        ties++;
+        document.write("You tied! This is " + ties + " ties!");
+    } else if ((one === "p") && (itsRandom === "p")) {
+        ties++;
+        document.write("You tied! This is " + ties + " ties!");
+    } else if ((one === "r") && (itsRandom === "r")) {
+        ties++;
+        document.write("You tied! This is " + ties + " ties!");
+    } 
+// }
+// this prints to the screen a random value from the 'var options' array,
+// by using 'itsRandom' to print to the screen.
+var here = "<p>random... " + itsRandom + "</p>" +
+        "<p>you picked... " + one + "</p>";
+// by using the variable 'one' this code will print out the exact letter 
+// that the User hit on the keyboard.
+    // var here = "<p>Here is a random value for you... " + one + "</p>";
+// this code will print to the div container on the screen.
+document.querySelector("#three").innerHTML = here;
+// used the code below as a test to see what it printed onto the screen.
+    //document.querySelector('#counter').innerText = here;
+}
+
+document.onkeypress = play;
+
+</script>
+</body>
+</html>

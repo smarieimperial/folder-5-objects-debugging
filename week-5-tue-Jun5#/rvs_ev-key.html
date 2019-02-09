@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+
+<body>
+
+    <script type="text/javascript">
+	
+		var guesses = [];
+	
+	function rps(ev) {
+	
+		guesses.push(ev.key);
+		
+		if (ev.key == 'r') {
+			alert('rock');
+		} else if (ev.key == 'p') {
+			alert('paper');
+		} else if (ev.key == 's') {
+			alert('scissors');
+		}
+		
+		alert(guesses);
+	
+	}
+	
+	document.onkeyup = rps;
+    
+    </script>
+</body>
+
+</html>

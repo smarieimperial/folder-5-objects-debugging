@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+
+<body>
+
+    <div id="target"></div>
+
+    <script type="text/javascript">
+        
+
+//using code here, add the text bears to the div with an id of target above
+
+//one way
+document.querySelector('#target').innerHTML = "bears";
+
+//another way
+// document.getElementById('target').innerText = "bears";
+
+//another way
+		// document.getElementsByTagName('div')[0].innerText = "bears";
+
+	//if you want to add something to the bears text
+    var target_div = document.querySelector('#target');
+		target_div.innerText = target_div.innerText + ' bears';
+    
+    
+    
+    </script>
+</body>
+
+</html>

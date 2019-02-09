@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="container">
+		<p>Tie Count: <span id="ties"></span></p>
+		<p>What you pressed <span id="userChoice"></span></p>
+		<p>What computer pressed <span id="computerChoice"></span></p>
+	</div>
+
+<script type="text/javascript">
+		var options = ['r', 'p', 's'];
+	var ties = 0;
+	
+	document.querySelector("#ties").innerText = ties;
+
+
+
+	function rps(event){
+		var keyUserPressed = event.key;
+
+		var computerPickIndex = Math.floor(Math.random()*options.length);
+
+		var computerOption = options[computerPickIndex];
+
+		document.querySelector("#userChoice").innerText = keyUserPressed;
+		document.querySelector("#computerChoice").innerText = computerOption;
+
+		if (keyUserPressed == computerOption){
+			ties++;
+			document.querySelector("#ties").innerText = ties;
+		}
+		
+	}
+
+	document.onkeyup = rps;
+
+
+</script>
+</body>
+</html>

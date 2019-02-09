@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var options = ['r', 'p', 's'];
+	var ties = 0;
+
+	function rps(event){
+		var keyUserPressed = event.key;
+
+		var computerPickIndex = Math.floor(Math.random()*options.length);
+
+		var computerOption = options[computerPickIndex];
+
+		console.log('user chose ' + keyUserPressed);
+		console.log('computer chose ' + computerOption);
+
+		if (keyUserPressed == computerOption){
+			ties++;
+			console.log('tied ' + ties); //on the second time, it says tied 1 not tied 2 WHY??
+		}
+		
+	}
+
+	document.onkeyup = rps;
+
+</script>
+</body>
+</html>
+

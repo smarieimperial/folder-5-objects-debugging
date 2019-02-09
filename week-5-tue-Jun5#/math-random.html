@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	//Math.random() (with decimal) returns a random number between 0 and 1 (it'll never be 1)
+	// var a = Math.random();
+	// console.log(a);
+
+	// //random number (with decimal) between 0 and 100 (never be 100)
+	// var b = Math.random()*100;
+	// console.log(b)
+
+	// //Math.floor rounds down
+	// var c = Math.floor(1.5);
+	// console.log(c);
+
+	//this returns a random INTEGER from 0 to 99 (including 0 and 99)
+	// var d = Math.floor(Math.random()*100);	
+	// console.log(d);
+
+	// var toyotas = ["camry", "corolla", "supra", "celica", "avalon", "prius", "sienna"];
+	
+	// var len = toyotas.length;
+	// console.log(len);
+
+	// //random number between 0 and 6.9999999999
+	// var ranNum = Math.random()*toyotas.length;
+
+	// //random INTEGER between 0 and 6 (including 0 and 6)
+	// var randomIndex = Math.floor(Math.random()*toyotas.length);	
+
+	// //console logs a random element from the toyotas array
+	// console.log(toyotas[randomIndex]);
+
+	var d = Math.floor(Math.random()*120);	
+	console.log(d);
+
+	function getRandomIntInclusive(min, max) {
+	  min = Math.ceil(min);
+	  max = Math.floor(max);
+	  return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive 
+
+	  getRandomIntInclusive(19, 120)
+}
+
+</script>
+</body>
+</html>
+

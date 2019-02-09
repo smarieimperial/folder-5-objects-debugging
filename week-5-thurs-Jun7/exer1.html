@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+        <!-- div container that will print to browser -->
+        <div id="three">
+            <p>Here are some random values</p>
+        </div>
+
+<script type="text/javascript">
+	
+    //when a User presses a key, upon release the function will create an event
+    document.onkeypress  = function(event) {
+    var one = event.key; 
+    var options = ['r', 'p', 's'];
+
+	//write code so that on key press, you alert a random value from the options array
+    // (you can't explicitly use 0, 1, 2 in your code)
+
+    var itsRandom = options[Math.floor(Math.random()
+            * options.length)]; 
+ 
+
+    //this prints to the screen a random value from the 'var options array',
+    //by using 'itsRandom' to print to the screen.
+    //var here = "<p>Here is a random value for you... " + itsRandom + "</p>";
+
+    //by using the variable 'one' this code will print out the exact letter 
+    //that the User hit on the keyboard
+    var here = "<p>Here is a random value for you... " + one + "</p>";
+               
+     document.querySelector("#three").innerHTML = here;
+     
+    }
+
+</script>
+</body>
+</html>
+
+
+
+	

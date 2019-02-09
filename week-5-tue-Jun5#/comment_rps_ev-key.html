@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	//when the user hits r, alert rock
+	//when the user hits p, alert paper
+	//when the user hits s, alert scissors
+	var guesses = [];  //the array of guesses will be contained here
+
+	function rps(ev){
+
+		//one way
+			// var k = ev.key;
+
+			// if (k == 'r'){
+			// 	alert('rock');
+			// }else if (k == 'p'){
+			// 	alert('paper');
+			// }else if (k == 's'){
+			// 	alert('scissors');
+			// }
+
+		guesses.push(ev.key);
+
+		//another way. this block of code runs and prints out either rock, paper, or scissors
+		// if User hits either of the following keys: r, p, or s.  If User hits, q or v or
+		// d, the alert will print out the respective key that was pressed. The array will hold
+		// the collection of keys hit, for example if User pressed the keys:
+		// r, p, s, q, w, d, a
+		// then they array will hold those letters and 'alert(guesses);' will print out 
+		// all those letters.
+			if (ev.key == 'r'){
+				alert('rock');
+			}else if (ev.key == 'p'){
+				alert('paper');
+			}else if (ev.key == 's'){
+				alert('scissors');
+			}
+			
+		alert(guesses); 
+	}
+
+	document.onkeyup = rps;
+</script>
+</body>
+</html>

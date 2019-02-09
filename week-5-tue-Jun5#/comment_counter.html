@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<div>Counter: <span id="counter"></span></div>
+
+<script type="text/javascript">
+	//write code here to add the number of times a key was hit into the span with an id of counter
+
+	//counter starts at 0
+	var counter = 0;
+    //document writes to the page, The querySelector() method returns the first element that matches a specified CSS selector(s)
+    //in the document
+    //#counter is the name
+	document.querySelector('#counter').innerText = counter;
+
+    //this function name is goUp
+    //the counter starts at 1, then writes the number in between the empty space of <span></span>
+    //and prints to the page
+	function goUp(){
+		counter += 1; 
+			//counter = counter +1
+			//counter++;  can use this code too
+			//++counter;
+		document.querySelector('#counter').innerText = counter;
+	}
+    //here when a key is pressed and released, the goUp() function is called
+	document.onkeyup = goUp;
+
+</script>
+</body>
+</html>

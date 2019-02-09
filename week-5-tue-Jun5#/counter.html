@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+
+<body>
+
+<!-- span is inside a div and the id name is counter.
+	The id can be access by querySelector and using #counter.
+	Text will go iside the <span></span>
+	-->
+	
+<div>Counter: <span id="counter"></span></div>
+
+	<!-- javascript tag goes here
+	-->
+    <script type="text/javascript">
+	
+	//set counter to 0
+	var counter = 0;
+	
+	//print out the value 0 the page in between the span tags
+	document.querySelector('#counter').innerText = counter;
+	
+	document.querySelector('#counter').innerHTML = '<h2>bears<h2>';
+	
+	//this function is called when a User presses a key
+	function goUp() {
+		counter++;
+		
+		//this code below shows the incremented value onto the page
+		// and it updates the 0 in-between the span tags.
+		document.querySelector('#counter').innerText = counter;
+		}
+		
+		document.onkeyup = goUp;
+    
+    </script>
+	
+	
+</body>
+
+</html>

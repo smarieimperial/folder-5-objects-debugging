@@ -1,0 +1,44 @@
+<!-- make an html file 
+
+put the script tag in
+
+in the script tag, write code so that when the user hits a key, it alerts the key pressed -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+
+<body>
+        <!-- prints out to the page -->
+        <div id="content"></div>
+        
+
+    <script type="text/javascript">
+        
+        //this code was added - it's an array named guesses hold the keys that are pressed and recorded by dog.key
+        var guesses = [];
+
+    //this is part of original code, a function is created named 'alertKey' and the 'event' name is 'dog'
+    function alertKey(dog){
+
+        //this is related to var guesses array and pushes the key that the User pressed on the keyboard 
+        // that is held in 'dog.key' into the array
+    guesses.push(dog.key);
+
+    //this is part of original code
+    alert(dog.key);
+
+        //this code works with the 'div' above 'script' in the 'body' and prints out keys held in 'guesses' array 
+        //and prints to page by printing to 'content' id, in between the 'div' tags
+    document.querySelector('#content').innerText = guesses;
+}
+
+document.onkeyup = alertKey;
+    
+
+    </script>
+</body>
+
+</html>

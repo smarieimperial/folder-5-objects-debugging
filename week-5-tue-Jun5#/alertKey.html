@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+
+<body>
+
+		<div id="content"></div>
+
+    <script type="text/javascript">
+	
+		var letters = [];
+		
+		function alertKey(ev) {
+			letters.push(ev.key);
+			alert(ev.key);
+			
+			document.querySelector('#content').innerText = letters;
+			}
+			
+		document.onkeyup = alertKey;
+    
+    </script>
+</body>
+
+</html>
